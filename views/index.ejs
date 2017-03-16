@@ -1,0 +1,24 @@
+<html>
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<title>MONGOOSES</title>
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>Welcome to Mongoose</h1>
+			<h3>Mongooses:</h3>
+			<% for(x in animals) { %>
+				<table>
+					<tbody>
+						<h3><a href="/mongooses/<%= animals[x].id %>"><%= animals[x].name %></a></h3>
+						<hr>
+					</tbody>
+				</table>
+			<% } %>
+			<a href="/mongooses/new"><button class="btn btn-success">Add Mongoose</button></a>
+		</div>
+	</div>
+</body>
+</html>

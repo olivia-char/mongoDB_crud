@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<title>Mongoose Id</title>
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<a href="/"><button class="btn btn-default">Home</button></a>
+			<h2>Here's a Mongoose!</h2>
+			<h3>Name: <%= animal.name %></h3>
+			<h3>Age: <%= animal.age %></h3>
+			<h3>Attitude: <%= animal.attitude %></h3>
+			<h3>Color: <%= animal.color %></h3>
+	
+			<a href="/mongooses/<%= animal.id %>/edit"><button class="btn btn-warning">Edit</button></a>
+
+			<form action="/mongooses/<%= animal.id %>/delete" method="post">
+				<button class="btn btn-danger">Delete</button>
+			</form>	
+		</div>
+	</div>
+</body>
+</html>
+	
